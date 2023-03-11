@@ -19,30 +19,10 @@
 
     </mat-toolbar-row>
 
-    <mat-toolbar-row>
-        <!-- <mat-tab-group>
-            <mat-tab *ngFor="let menu of navbarMenu">
-                <ng-template mat-tab-label>
-                    <a  (click)="navigateTo(menu.link)">
-                    {{menu.name}}
-                  </a>
-                 </ng-template>
-            </mat-tab>
-        </mat-tab-group> -->
-        <!-- <nav mat-tab-nav-bar >
-            <a mat-tab-link class="mat-tab-header mat-tab-header-pagination-controls-enabled" *ngFor="let menu of navbarMenu"  #routerLinkActive
-              [active]="routerLinkActive.active" (click)="navigateTo(menu.link)">
-              {{menu.name}}
-            </a>
-          </nav> -->
-          <!-- <mat-tab-group [selectedIndex]="0" (selectedTabChange)="navigate($event)">
-            <mat-tab *ngFor="let menu of navbarMenu" [label]="menu.name"></mat-tab>
-        </mat-tab-group> -->
-        <nav mat-tab-nav-bar>
-            <a mat-tab-link class="category-name" *ngFor="let menu of navbarMenu" [routerLink]="menu.link" routerLinkActive
-              #rla="routerLinkActive" [active]="rla.isActive">
-              {{menu.name}}
-            </a>
-          </nav>
-    </mat-toolbar-row>
 </mat-toolbar>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link class="category-name" *ngFor="let menu of navbarMenu" [routerLink]="menu.link" routerLinkActive
+      #rla="routerLinkActive" [active]="rla.isActive">
+      {{menu.name}}
+    </a>
+</nav>

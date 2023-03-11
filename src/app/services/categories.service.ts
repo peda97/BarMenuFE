@@ -17,4 +17,13 @@ export class CategoriesService {
   getAllCategories(): Observable<BarMenu>{
      return this.http.get<BarMenu>(environment.endpointBase);
   }
+
+  /**
+ * Replace &,/ and space with -.
+ * @param {string} categoryName - A string param
+ * @return {string} Return a string
+ */
+  modifyLinkName(categoryName: string): string{
+    return categoryName.toLowerCase().split(' ').join('-').split('/').join('').split('&').join('-');
+  }
 }

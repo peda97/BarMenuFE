@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTabChangeEvent } from '@angular/material/tabs';
-import { Router } from '@angular/router';
 import { NavbarMenu } from 'src/app/models/navbar-menu.model';
 import { CategoriesService } from 'src/app/services/categories.service';
 
@@ -14,8 +12,7 @@ export class NavbarComponent implements OnInit {
   businessName!: string;
   navbarMenu: NavbarMenu[] = [];
   
-  constructor(private categoriesService: CategoriesService,
-    private router: Router){
+  constructor(private categoriesService: CategoriesService){
 
   }
   ngOnInit(): void {
@@ -34,9 +31,9 @@ export class NavbarComponent implements OnInit {
           result.categories.forEach((_)=>{
             this.navbarMenu.push({
               name: this.modifyNavbarName(_.name),
-              link: '/category/' + this.modifyLinkName(_.name)
+              link: '/category/' + this.categoriesService.modifyLinkName(_.name)
             })
-          });
+            });
           console.log(this.navbarMenu);
         }
       },
@@ -59,22 +56,5 @@ export class NavbarComponent implements OnInit {
     return categoryName.toUpperCase();
   }
 
- /**
- * Replace &,/ and space with -.
- * @param {string} categoryName - A string param
- * @return {string} Return a string
- */
-  modifyLinkName(categoryName: string): string{
-    return categoryName.toLowerCase().split(' ').join('-').split('/').join('').split('&').join('-');
-  }
 
-  navigateTo(category: string){
-    this.router.navigate([category]);
-  }
-
-  navigate(event: MatTabChangeEvent) {
-    console.log(event, "event")
-  //   const tabData = this.navPaths[event.index];    
-  //  this.router.navigate([tabData.path], { relativeTo: this.activatedRoute });
-}
 }
