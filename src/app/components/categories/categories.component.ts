@@ -9,7 +9,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
   styleUrls: ['./categories.component.scss']
 })
 export class CategoriesComponent implements OnInit {
-  products!: Product[];
+  products: Product[] = [];
   constructor(private route: ActivatedRoute,
     private categoriesService: CategoriesService){}
 
