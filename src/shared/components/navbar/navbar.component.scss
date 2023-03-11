@@ -1,0 +1,25 @@
+@import 'variables';
+
+.nav-bar{
+    .nav-header{
+        background-color: $white;
+    }
+    .btn-round{
+        pointer-events: none;
+    }
+    .example-spacer {
+        flex: 1 1 auto;
+      }
+    .menu{
+        font-weight: $font-weight-light;
+    }
+    .example-icon{
+        .circle-half-stroke{
+            transform: rotate(45deg);
+        }
+    }
+}
+:host::ng-deep .btn-round.mat-mdc-icon-button{
+    background-color: $red;
+    font-size: medium;
+}
