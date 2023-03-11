@@ -8,6 +8,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { ProductsComponent } from './products/products.component';
 import { ReceiptComponent } from './products/receipt/receipt.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { ReceiptComponent } from './products/receipt/receipt.component';
     CommonModule,
     CategoriesRoutingModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [CategoriesService]
 })
