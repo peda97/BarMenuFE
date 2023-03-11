@@ -4,7 +4,9 @@ import { NavbarComponent } from './navbar.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CategoriesService } from 'src/app/services/categories.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -15,9 +17,11 @@ import { MatListModule } from '@angular/material/list';
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule,
+    HttpClientModule
   ],
   exports: [NavbarComponent],
-  providers: []
+  providers: [CategoriesService]
 })
 export class NavbarModule { }
