@@ -1,4 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'variables';
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Helvetica;
+    --text-color: #333333;
+    --bkg-color: white;
+    --nav-bkg-color: white; 
+}
+body.dark-theme {
+    --text-color: white;
+    --bkg-color: rgba(0,0,0,0.5);
+    --nav-bkg-color:#333333;
+}
+
+body {
+  background-color: var(--bkg-color);
+}

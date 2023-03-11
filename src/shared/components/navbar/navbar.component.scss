@@ -1,28 +1,52 @@
-@import 'variables';
+@import "variables";
 
-.nav-bar{
-    .nav-header{
-        background-color: $white;
+.nav-bar {
+  .nav-header {
+    background-color: var(--nav-bkg-color);
+    padding: 46px 16px 46px 16px;
+  }
+  .btn-round {
+    pointer-events: none;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .menu {
+    font-weight: $font-weight-light;
+    color: var(--text-color);
+  }
+  .example-icon {
+    .circle-half-stroke {
+      transform: rotate(45deg);
     }
-    .btn-round{
-        pointer-events: none;
-    }
-    .example-spacer {
-        flex: 1 1 auto;
-      }
-    .menu{
-        font-weight: $font-weight-light;
-    }
-    .example-icon{
-        .circle-half-stroke{
-            transform: rotate(45deg);
-        }
-    }
+  }
+
+  .title{
+    color: var(--text-color);
+  }
 }
-:host::ng-deep .btn-round.mat-mdc-icon-button{
-    background-color: $red;
-    font-size: medium;
+:host::ng-deep .btn-round.mat-mdc-icon-button {
+  background-color: $red;
+  font-size: medium;
 }
-:host::ng-deep .mdc-tab-indicator--active{
-    border-bottom: none;
+
+:host::ng-deep
+  .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active
+  .mdc-tab__text-label {
+  color: #f44242;
+}
+:host::ng-deep .mdc-tab-indicator--active {
+  border-bottom: none;
+}
+
+:host::ng-deep .mat-mdc-tab-header {
+  background-color: #999999;
+}
+
+.category-name {
+  font-weight: bold;
+}
+
+:host::ng-deep .mdc-tab__text-label{
+color:#333333;
 }

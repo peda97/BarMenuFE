@@ -56,5 +56,9 @@ export class NavbarComponent implements OnInit {
     return categoryName.toUpperCase();
   }
 
+  toggleDarkTheme(): void {
+    document.body.classList.toggle('dark-theme');
+  }
+
 
 }
