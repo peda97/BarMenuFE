@@ -16,3 +16,9 @@ export interface BarMenu {
     logo: string;
     categories: Category[];
 }
+
+export interface SelectedProduct {
+    name: string;
+    price: number;
+    quantity: number;
+}

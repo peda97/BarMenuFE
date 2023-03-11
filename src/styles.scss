@@ -7,11 +7,13 @@ body {
     --text-color: #333333;
     --bkg-color: white;
     --nav-bkg-color: white; 
+    --dark-mode-switch: rotate(45deg);
 }
 body.dark-theme {
     --text-color: white;
     --bkg-color: rgba(0,0,0,0.5);
     --nav-bkg-color:#333333;
+    --dark-mode-switch: rotate(225deg);
 }
 
 body {

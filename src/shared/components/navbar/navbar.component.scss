@@ -17,7 +17,7 @@
   }
   .example-icon {
     .circle-half-stroke {
-      transform: rotate(45deg);
+        transform: var(--dark-mode-switch);
     }
   }
 
