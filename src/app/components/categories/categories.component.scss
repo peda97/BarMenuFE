@@ -7,16 +7,11 @@
 }
 
 .bill{
-  margin-top: 60px;
-  margin-right: 5%;
-  position: fixed;
-  bottom: 10px;
-  right: 0;
   background-color: $red !important;
   height: 42px;
   width: 40px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   color: white;
   font-weight: 700;
