@@ -23,3 +23,6 @@
     background-color: $red;
     font-size: medium;
 }
+:host::ng-deep .mdc-tab-indicator--active{
+    border-bottom: none;
+}

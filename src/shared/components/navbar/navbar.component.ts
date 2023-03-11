@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatTabChangeEvent } from '@angular/material/tabs';
+import { Router } from '@angular/router';
 import { NavbarMenu } from 'src/app/models/navbar-menu.model';
 import { CategoriesService } from 'src/app/services/categories.service';
 
@@ -12,7 +14,8 @@ export class NavbarComponent implements OnInit {
   businessName!: string;
   navbarMenu: NavbarMenu[] = [];
   
-  constructor(private categoriesService: CategoriesService){
+  constructor(private categoriesService: CategoriesService,
+    private router: Router){
 
   }
   ngOnInit(): void {
@@ -64,4 +67,14 @@ export class NavbarComponent implements OnInit {
   modifyLinkName(categoryName: string): string{
     return categoryName.toLowerCase().split(' ').join('-').split('/').join('').split('&').join('-');
   }
+
+  navigateTo(category: string){
+    this.router.navigate([category]);
+  }
+
+  navigate(event: MatTabChangeEvent) {
+    console.log(event, "event")
+  //   const tabData = this.navPaths[event.index];    
+  //  this.router.navigate([tabData.path], { relativeTo: this.activatedRoute });
+}
 }

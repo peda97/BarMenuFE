@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import { CategoriesService } from 'src/app/services/categories.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   exports: [NavbarComponent],
   providers: [CategoriesService]
