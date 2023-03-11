@@ -20,9 +20,12 @@
     </mat-toolbar-row>
 
 </mat-toolbar>
-<nav mat-tab-nav-bar>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
     <a mat-tab-link class="category-name" *ngFor="let menu of navbarMenu" [routerLink]="menu.link" routerLinkActive
       #rla="routerLinkActive" [active]="rla.isActive">
       {{menu.name}}
     </a>
 </nav>
+<mat-tab-nav-panel #tabPanel>
+    <router-outlet></router-outlet>
+</mat-tab-nav-panel>

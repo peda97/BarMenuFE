@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { ProductsComponent } from './products/products.component';
 import { ReceiptComponent } from './products/receipt/receipt.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -23,7 +24,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CategoriesRoutingModule,
     MatCardModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    FlexLayoutModule
   ],
   providers: [CategoriesService]
 })
