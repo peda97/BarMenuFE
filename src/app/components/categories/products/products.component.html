@@ -1,31 +1,29 @@
-
-  <div mat-dialog-content class="list">
-    <div layout="row" *ngFor="let product of data.productsSelected">
-      <mat-card class="product-card">
-        <mat-card-header class="product-header">
-          <mat-card-title class="title pe-3">{{product.name | uppercase}}</mat-card-title>
-          <div class="product-quantity">
-            <small class="sum">{{product.quantity}}</small>
-          </div>
-          <div class="product-price ps-3">{{product.price}}</div>
-        </mat-card-header>
-      </mat-card>
-
-     
-    </div >
-   
-    <div layout="row">
-      <mat-card class="total-products">
-        <mat-card-header class="total">
-          <mat-card-title class="title pe-3">TOTALI</mat-card-title>
-          <div class="product-price">{{data.totalPrice}}</div>
-        </mat-card-header>
-      </mat-card>
+<div mat-dialog-content class="list">
+  <div class="row" *ngFor="let product of data.productsSelected">
+    <div class="col-4 title text-end align-items-center">
+      {{product.name | uppercase}}
     </div>
-    
-    
-  </div>
-  <div mat-dialog-actions class="pb-4">
-    <button mat-button class="btn-send" (click)="openDialogModal()">DЁRGO FATURЁN</button>
+    <div class="col-4 d-flex justify-content-center align-items-center">
+      <div class="product-quantity text-center">
+        <small class="sum">{{product.quantity}}</small>
+      </div>
+    </div>
+    <div class="col-4 text-end d-flex justify-content-end align-items-center product-price">
+      {{product.price}}
+    </div>
+
   </div>
 
+  <hr>
+
+  <div class="row">
+    <div class="col-4 text-end title">TOTALI</div>
+    <div class="col-4"></div>
+    <div class="col-4 text-end product-price">{{data.totalPrice}}</div>
+  </div>
+
+
+</div>
+<div mat-dialog-actions class="pb-4">
+  <button mat-button class="btn-send" (click)="openDialogModal()">DЁRGO FATURЁN</button>
+</div>

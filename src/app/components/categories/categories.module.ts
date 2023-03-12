@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { CategoriesRoutingModule } from './categories-routing.module';
 import { CategoriesComponent } from './categories.component';
 import { CategoriesService } from 'src/app/services/categories.service';
@@ -12,6 +11,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
 import {MatInputModule} from '@angular/material/input';
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+
 
 
 
@@ -29,7 +30,8 @@ import {MatInputModule} from '@angular/material/input';
     MatDialogModule,
     FlexLayoutModule,
     MatTableModule,
-    MatInputModule
+    MatInputModule,
+    MatBottomSheetModule
   ],
   providers: [CategoriesService]
 })

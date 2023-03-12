@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product, SelectedProduct } from 'src/app/models/categories.model';
+import { Product } from 'src/app/models/categories.model';
 import { CategoriesService } from 'src/app/services/categories.service';
-import { MatDialog } from '@angular/material/dialog';
 import { ProductsComponent } from './products/products.component';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
 
 @Component({
   selector: 'app-categories',
@@ -14,7 +14,7 @@ export class CategoriesComponent implements OnInit {
   
   constructor(private route: ActivatedRoute,
     public categoriesService: CategoriesService,
-    private matDialog: MatDialog){}
+    private _bottomSheet: MatBottomSheet){}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -70,14 +70,14 @@ export class CategoriesComponent implements OnInit {
   /**
  * Open modal
  */
-  openModal = () => {
-    this.matDialog.open(ProductsComponent, {
+  openModal(){
+    this._bottomSheet.open(ProductsComponent,{
       disableClose: true,
       data: {
         productsSelected: this.categoriesService.selectedProducts,
         totalPrice: this.categoriesService.totalPrice
-      },
-    })
+      }
+    });
   };
 
 }

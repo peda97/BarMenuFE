@@ -36,7 +36,6 @@ export class NavbarComponent implements OnInit {
             })
             });
             this.isVisiblePage = true;
-          console.log(this.navbarMenu);
         }
       },
       error: (error) => {
