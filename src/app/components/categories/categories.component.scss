@@ -33,37 +33,44 @@
 .product-card {
   height: 100%;
   border-radius: unset;
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
 }
 
-.product{
-  height:195px;
-  width:195px;
+.product {
+  height: 195px;
 }
 
 .price {
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 0px 8px 0px 0px;
-position: absolute;
-left: 79.49%;
-right: -21.03%;
-top: 41.54%;
-bottom: 37.95%;
-transform: rotate(-90deg);
-
-
-  span {
-    position: absolute;
-  }
-
-  .product-price{
-    color: red;
-    font-weight: bold;
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px 8px 0px 0px;
+  position: absolute;
+  right: -32px;
+  top: 40px;
+  transform: rotate(-90deg);
 }
+  .product-price {
+    height: 24px;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 24px;
+    text-align: right;
+    color: #f44242;
+  }
+
+  .price-currency {
+    height: 21px;
+    font-family: "Helvetica";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    color: #666666;
+  }
 
 .product-first-letter {
   font-family: "Londrina Outline";
@@ -81,15 +88,16 @@ transform: rotate(-90deg);
 }
 
 .product-name {
-width: 165px;
-height: 27px;
-font-family: 'Helvetica';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 28px;
-display: flex;
-align-items: flex-end;
-text-transform: uppercase;
-color: #333333;
+  width: auto;
+  height: auto;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #333333;
+  position: absolute;
+  bottom: 10px;
+  word-break:break-all;
 }
