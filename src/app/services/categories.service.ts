@@ -69,4 +69,19 @@ export class CategoriesService {
     }
     return color;
   }
+
+/*
+ * Get first letter, if it is not a letter return "N" for no letters
+*/
+getFirstLetter(name: string) {
+  if (/^[a-z]/i.test(name)) {
+    return name.charAt(0).toUpperCase();
+  } else {
+    name = name.replace(/[^a-zA-Z]/g, "");
+    name = name.replace(/^\d/g, "");
+    if(name)
+      return name.charAt(0).toUpperCase();
+    return "N"
+  }
+}
 }
