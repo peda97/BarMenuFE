@@ -22,7 +22,7 @@
 </mat-toolbar>
 <nav mat-tab-nav-bar [tabPanel]="tabPanel" *ngIf="isVisiblePage">
     <a mat-tab-link class="category-name" *ngFor="let menu of navbarMenu" [routerLink]="menu.link" routerLinkActive
-      #rla="routerLinkActive" [active]="rla.isActive">
+      #routerla="routerLinkActive" [active]="routerla.isActive">
       {{menu.name}}
     </a>
 </nav>

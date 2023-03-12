@@ -77,6 +77,10 @@ export class CategoriesComponent implements OnInit {
         });
         this.totalPrice += selectedProduct.unitPrice;
         this.productCounter ++;
+        this.products.forEach(_ => {
+          if(_.name === selectedProduct.name)
+            _.boxShadow = "inset 0 0 0 1000px rgba(0,0,0,.2)";
+        });
       }
     }
     else{
@@ -85,6 +89,10 @@ export class CategoriesComponent implements OnInit {
         name: selectedProduct.name,
         price: selectedProduct.unitPrice,
         quantity: 1
+      });
+      this.products.forEach(_ => {
+        if(_.name === selectedProduct.name)
+          _.boxShadow = "inset 0 0 0 1000px rgba(0,0,0,.2)";
       });
       this.totalPrice += selectedProduct.unitPrice;
       this.productCounter ++;

@@ -2,6 +2,8 @@ export interface Product {
     name: string;
     unitPrice: number;
     backgroundColor?: string;
+    boxShadow?: string;
+    
 }
 
 export interface Category {
