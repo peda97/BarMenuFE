@@ -47,8 +47,6 @@ export class NavbarComponent implements OnInit {
 
   /**
  * Remove & and / from a string.
- * @param {string} categoryName - A string param
- * @return {string} Return a string
  */
   private modifyNavbarName(categoryName: string): string{
     if(categoryName.includes('&'))
@@ -58,6 +56,9 @@ export class NavbarComponent implements OnInit {
     return categoryName.toUpperCase();
   }
 
+   /**
+ * Theme
+ */
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
   }
