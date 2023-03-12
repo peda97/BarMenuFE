@@ -1,22 +1,23 @@
-<div mat-dialog-content class="list">
-  <div class="row" *ngFor="let product of data.productsSelected">
-    <div class="col-4 title text-end align-items-center">
-      {{product.name | uppercase}}
+<div class="list">
+  <div class="row mb-2" *ngFor="let product of data.productsSelected">
+    <div class="col-4 d-flex align-items-center">
+      <small class="text-end title w-100">{{product.name | uppercase}}</small>
     </div>
     <div class="col-4 d-flex justify-content-center align-items-center">
       <div class="product-quantity text-center">
         <small class="sum">{{product.quantity}}</small>
       </div>
     </div>
-    <div class="col-4 text-end d-flex justify-content-end align-items-center product-price">
-      {{product.price}}
+    <div class="col-4 d-flex justify-content-end align-items-center product-price">
+      <small class="text-end w-100">{{product.price}}</small>
+      
     </div>
 
   </div>
 
-  <hr>
+  <hr class="m-0 horizontal">
 
-  <div class="row">
+  <div class="row my-2">
     <div class="col-4 text-end title">TOTALI</div>
     <div class="col-4"></div>
     <div class="col-4 text-end product-price">{{data.totalPrice}}</div>
