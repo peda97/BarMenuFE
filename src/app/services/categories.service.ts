@@ -84,4 +84,15 @@ getFirstLetter(name: string) {
     return "N"
   }
 }
+
+/*
+ * Round a number to 2 decimal places
+*/
+
+roundPrice(price: number){
+  if(price % 1 != 0)
+    return price.toFixed(2);
+  return price;
+}
+
 }

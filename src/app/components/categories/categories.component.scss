@@ -38,6 +38,7 @@
 
 .product {
   height: 195px;
+  cursor: pointer;
 }
 
 .price {
@@ -46,7 +47,7 @@
   align-items: flex-start;
   padding: 0px 8px 0px 0px;
   position: absolute;
-  right: -32px;
+  right: -20px;
   top: 40px;
   transform: rotate(-90deg);
 }
