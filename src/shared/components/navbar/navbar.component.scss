@@ -13,7 +13,7 @@
   }
   .menu {
     font-weight: $font-weight-light;
-    color: var(--text-color);
+    color: $black;
   }
   .example-icon {
     .circle-half-stroke {
@@ -22,18 +22,18 @@
   }
 
   .title{
-    color: var(--text-color);
+    color: $black;
   }
 }
 :host::ng-deep .btn-round.mat-mdc-icon-button {
-  background-color: $red;
+  background-color: var(--color-red);
   font-size: medium;
 }
 
 :host::ng-deep
   .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active
   .mdc-tab__text-label {
-  color: #f44242;
+  color: var(--color-red);
 }
 :host::ng-deep .mdc-tab-indicator--active {
   border-bottom: none;
@@ -53,4 +53,9 @@ color:#333333;
 
 ::ng-deep.mdc-tab-indicator__content--underline {
   border-top-style: unset !important;
+}
+
+::ng-deep.mat-mdc-icon-button {
+  --mat-mdc-button-persistent-ripple-color: unset;
+  --mat-mdc-button-ripple-color: unset;
 }

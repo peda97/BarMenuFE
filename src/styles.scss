@@ -8,12 +8,14 @@ body {
     --bkg-color: white;
     --nav-bkg-color: white; 
     --dark-mode-switch: rotate(45deg);
+    --color-red: #F44242;
 }
 body.dark-theme {
     --text-color: white;
     --bkg-color: rgba(0,0,0,0.5);
-    --nav-bkg-color:#333333;
+    --nav-bkg-color:#cccccc;
     --dark-mode-switch: rotate(225deg);
+    --color-red: #0bbdbd;
 }
 
 body {
