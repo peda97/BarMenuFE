@@ -5,7 +5,7 @@
     .product-card{
         margin-top: 10px;
         margin-bottom: 10px;
-        background: white;
+        background: $white;
         border: unset;
         box-shadow: unset;
         .product-header{
@@ -21,7 +21,7 @@
             .sum{
                 align-items: center;
                 display: flex;
-                color: #666666;
+                color: $gray-dark;
                 font-weight: 600;
             }
         }
@@ -31,11 +31,11 @@
     .total-products{
         margin-top: 10px;
         margin-bottom: 0;
-        background: white;
+        background: $white;
         border: unset;
         box-shadow: unset;
         .total{
-            border-top: 2px solid #666666;
+            border-top: 2px solid $gray-dark;
             padding-top: 10px;
             align-items: center;
         }
@@ -48,9 +48,9 @@
 
 
 .title{
-    width: 130px;
+    width: 184px;
     text-align: end;
-    color: #666666;
+    color: $gray-dark;
 }
 .product-price{
     color: $red;

@@ -50,3 +50,7 @@
 :host::ng-deep .mdc-tab__text-label{
 color:#333333;
 }
+
+::ng-deep.mdc-tab-indicator__content--underline {
+  border-top-style: unset !important;
+}
