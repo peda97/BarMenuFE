@@ -10,6 +10,8 @@ import { ProductsComponent } from './products/products.component';
 import { ReceiptComponent } from './products/receipt/receipt.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatTableModule} from '@angular/material/table';
+import {MatInputModule} from '@angular/material/input';
 
 
 
@@ -25,7 +27,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatButtonModule,
     MatDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule,
+    MatInputModule
   ],
   providers: [CategoriesService]
 })

@@ -1,0 +1,12 @@
+$white: #ffffff;
+$red: #F44242;
+$font-weight-light: 300;
+$gray: #999999;
+$black: #333333;
+$gray-dark: #666666;
+
+.btn-send{
+    width: 100%;
+    background: $red !important;
+    color: $white !important;
+}
