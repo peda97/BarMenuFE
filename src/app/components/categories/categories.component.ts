@@ -13,6 +13,7 @@ export class CategoriesComponent implements OnInit {
   selectedProducts: SelectedProduct[] = [];
   totalPrice: number = 0;
   productCounter: number = 0;
+  isPageVisible: boolean = false;
   constructor(private route: ActivatedRoute,
     private categoriesService: CategoriesService){}
 
@@ -38,7 +39,8 @@ export class CategoriesComponent implements OnInit {
             unitPrice: element.unitPrice,
             backgroundColor: this.getRandomColor()
           }
-         })
+         });
+        this.isPageVisible = true;
       },
       error: (error) => {
         console.log(error);
@@ -59,7 +61,7 @@ export class CategoriesComponent implements OnInit {
   }
 
   selectProduct(selectedProduct: Product){
-    if(this.selectedProducts.length>0){
+    if(this.selectedProducts.length > 0){
       const index = this.selectedProducts.findIndex(product => product.name === selectedProduct.name);
       if(index > -1){
         //product exists in the list
@@ -89,14 +91,4 @@ export class CategoriesComponent implements OnInit {
     }
   }
 
-  /**
-   * Receives the ordered products array and calculates the total price of products.
-   */
-  getTotalPrice(selectedProducts: SelectedProduct[]): number {
-    this.totalPrice = 0;
-    selectedProducts.forEach(product => {
-      this.totalPrice += product.price;
-    });
-    return this.totalPrice;
-  }
 }

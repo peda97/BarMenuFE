@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
   nuis!: string;
   businessName!: string;
   navbarMenu: NavbarMenu[] = [];
+  isVisiblePage: boolean = false;
   
   constructor(private categoriesService: CategoriesService){
 
@@ -34,6 +35,7 @@ export class NavbarComponent implements OnInit {
               link: '/category/' + this.categoriesService.modifyLinkName(_.name)
             })
             });
+            this.isVisiblePage = true;
           console.log(this.navbarMenu);
         }
       },
@@ -52,7 +54,7 @@ export class NavbarComponent implements OnInit {
     if(categoryName.includes('&'))
       return categoryName.split(' ').join('').split('&').join(' & ').toUpperCase();
     else if(categoryName.includes('/'))
-      return categoryName.split(' ').join('').split('/').join(' & ').toUpperCase();
+      return categoryName.split('/').join(' &').toUpperCase();
     return categoryName.toUpperCase();
   }
 

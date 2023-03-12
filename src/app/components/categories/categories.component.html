@@ -2,7 +2,7 @@
     <div fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="33%"  *ngFor="let product of products"
       (click)="selectProduct(product)"
         class="product m-0">
-        <mat-card  class="mat-elevation-z4" [ngStyle]="{'background-color': product.backgroundColor}">
+        <mat-card  class="mat-elevation-z4 product-card" [ngStyle]="{'background-color': product.backgroundColor}">
             <mat-card-header>
               <mat-card-title-group>
                 <mat-card-title>{{product.unitPrice}} <small>leke</small></mat-card-title>
@@ -14,12 +14,13 @@
         </mat-card>
     </div>
 </div>
+
 <ng-template #noproducts>
-  <div layout="row" class="products">
+  <div *ngIf="isPageVisible" layout="row" class="products">
     <h2 class="text-center mt-3">Kjo kategori nuk ka asnje produkt!</h2>
   </div>
- 
 </ng-template>
+
 <div class="d-flex justify-content-end" *ngIf="selectedProducts.length>0">
    <div class="bill m-2 wave">{{productCounter}}</div> 
 </div>
