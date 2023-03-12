@@ -1,15 +1,64 @@
 @import 'variables&classes';
-.product-card{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background: white;
-    border: unset;
-    box-shadow: unset;
-    
-    
-}
-.mat-mdc-card-header {
-    align-items: center;
-    padding: 0;
+
+.list{
+    padding: 10px;
+    .product-card{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: white;
+        border: unset;
+        box-shadow: unset;
+        .product-header{
+            align-items: center;
+            padding: 0;
+        }
+        .product-quantity{
+            display: flex;
+            width: 50px;
+            height: 23px;
+            background: #F7F7F7;
+            justify-content: center;
+            .sum{
+                align-items: center;
+                display: flex;
+                color: #666666;
+                font-weight: 600;
+            }
+        }
+      
+        
+    }
+    .total-products{
+        margin-top: 10px;
+        margin-bottom: 0;
+        background: white;
+        border: unset;
+        box-shadow: unset;
+        .total{
+            border-top: 2px solid #666666;
+            padding-top: 10px;
+            align-items: center;
+        }
+        .total-price{
+            color: $red;
+            font-weight: 500;
+        }
+    }
 }
 
+
+.title{
+    width: 130px;
+    text-align: end;
+    color: #666666;
+}
+.product-price{
+    color: $red;
+    font-weight: 500;
+    width: 75px;
+    text-align: end;
+}
+
+::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface{
+    border-radius: unset;
+}

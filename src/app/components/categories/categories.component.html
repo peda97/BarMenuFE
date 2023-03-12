@@ -1,18 +1,20 @@
 <div fxLayout="row wrap" class="content" *ngIf="categoriesService.products.length > 0; else noproducts">
-    <div fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="33%"  *ngFor="let product of categoriesService.products"
-      (click)="selectProduct(product)"
-        class="product m-0">
-        <mat-card  class="mat-elevation-z4 product-card" [ngStyle]="{'background-color': product.backgroundColor, 'box-shadow': product.boxShadow ? product.boxShadow: 'unset'}">
-            <mat-card-header>
-              <mat-card-title-group>
-                <mat-card-title>{{product.unitPrice}} <small>leke</small></mat-card-title>
-              </mat-card-title-group>
-            </mat-card-header>
-            <mat-card-content>
-              {{product.name}}
-            </mat-card-content>
-        </mat-card>
-    </div>
+  <div fxFlex="20%" fxFlex.xs="50%" fxFlex.sm="33%" *ngFor="let product of categoriesService.products"
+    (click)="selectProduct(product)" class="product m-0">
+    <mat-card class="mat-elevation-z4 product-card"
+      [ngStyle]="{'background-color': product.backgroundColor, 'box-shadow': product.boxShadow ? product.boxShadow: 'unset'}">
+      <mat-card-content>
+        <span class="product-first-letter">{{ product.name[0]|titlecase }}</span>
+        <div class="price">
+          <div class="product-price">{{product.unitPrice}} </div>
+          <div>&nbsp; leke</div>
+        </div>
+        <div class="product-name">
+          {{product.name}}
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>
 
 <ng-template #noproducts>
@@ -22,8 +24,5 @@
 </ng-template>
 
 <div class="d-flex justify-content-end" *ngIf="categoriesService.selectedProducts.length>0" (click)="openModal()">
-   <div class="bill m-2 wave">{{categoriesService.productCounter}}</div> 
+  <div class="bill m-2 wave">{{categoriesService.productCounter}}</div>
 </div>
-
-
-

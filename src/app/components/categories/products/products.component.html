@@ -1,18 +1,31 @@
-<div class="m-3">
-  <div mat-dialog-content class="p-2">
-    <div layout="row">
+
+  <div mat-dialog-content class="list">
+    <div layout="row" *ngFor="let product of data.productsSelected">
       <mat-card class="product-card">
-        <mat-card-header>
-          <mat-card-title class="title pe-3">Hey</mat-card-title>
-          <div class="d-flex align-items-center product-quantity">200</div>
-          <div class="d-flex align-items-center product-price ps-3">200</div>
+        <mat-card-header class="product-header">
+          <mat-card-title class="title pe-3">{{product.name | uppercase}}</mat-card-title>
+          <div class="product-quantity">
+            <small class="sum">{{product.quantity}}</small>
+          </div>
+          <div class="product-price ps-3">{{product.price}}</div>
+        </mat-card-header>
+      </mat-card>
+
+     
+    </div >
+   
+    <div layout="row">
+      <mat-card class="total-products">
+        <mat-card-header class="total">
+          <mat-card-title class="title pe-3">TOTALI</mat-card-title>
+          <div class="product-price">{{data.totalPrice}}</div>
         </mat-card-header>
       </mat-card>
     </div>
     
     
   </div>
-  <div mat-dialog-actions>
-    <button mat-button class="btn-send" (click)="openDialogModal()">Ok</button>
+  <div mat-dialog-actions class="pb-4">
+    <button mat-button class="btn-send" (click)="openDialogModal()">DЁRGO FATURЁN</button>
   </div>
-</div>
+

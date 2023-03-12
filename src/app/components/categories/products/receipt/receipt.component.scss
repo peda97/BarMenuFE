@@ -3,3 +3,6 @@
 .sended-text{
     color: $gray-dark;
 }
+::ng-deep.mat-mdc-dialog-container .mdc-dialog__surface{
+    border-radius: unset;
+}
